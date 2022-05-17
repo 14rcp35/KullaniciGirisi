@@ -22,12 +22,18 @@ public class Main {
                 newPassword1=input.nextLine();
                 System.out.println("Yeni şifrenizi Tekrar Giriniz : ");
                 newPassword2=input.nextLine();
-                if(newPassword1.equals(newPassword2)&&username.equals("admin") ){
-                    System.out.println("Şifrenizi Değiştirme İşlemi Başarılı. Kullanıcı Adınız ve Yeni Şifreniz İle Giriş Yapınız");
+                if(newPassword1=="123"){
+                    System.out.println("Şifreniz Eski Şifreniz ile Aynı Olamaz Lütfen Başka Şifre Oluşturunuz");
                 }
                 else{
-                    System.out.println("Şifrenizi Değiştirme İşlemi Başarısız");
+                    if(newPassword1.equals(newPassword2)&&username.equals("admin") ){
+                        System.out.println("Şifrenizi Değiştirme İşlemi Başarılı. Kullanıcı Adınız ve Yeni Şifreniz İle Giriş Yapınız");
+                    }
+                    else{
+                        System.out.println("Şifrenizi Değiştirme İşlemi Başarısız");
+                    }
                 }
+
             }else{
                 System.out.println("Şifre Değiştirme İşlemi Yapılmadı");
             }
